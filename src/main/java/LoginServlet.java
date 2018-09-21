@@ -28,7 +28,6 @@ public class LoginServlet extends HttpServlet {
         if(UserData.users.contains(current))
         {
             session.setAttribute("username", name);
-            Cookie cookie = req.getCookies();
             resp.sendRedirect("/homepage");
         }
         // incorect User name pass word
